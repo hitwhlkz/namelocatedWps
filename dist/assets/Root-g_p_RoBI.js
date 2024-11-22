@@ -1,0 +1,1 @@
+import{_ as s,o as t,c as o,a,t as n}from"./index-_oq92NXM.js";const r={name:"HelloWps",data(){return{msg:"欢迎来到wps加载项的世界!"}}};function c(l,p,_,i,e,m){return t(),o("div",null,[a("h1",null,n(e.msg),1)])}const d=s(r,[["render",c]]);export{d as default};

@@ -1,9 +1,15 @@
+import { pinyin } from "pinyin-pro"; // 使用 pinyin 库，需安装：npm install pinyin
+
 //在后续的wps版本中，wps的所有枚举值都会通过wps.Enum对象来自动支持，现阶段先人工定义
 var WPS_Enum = {
     msoCTPDockPositionLeft:0,
     msoCTPDockPositionRight:2
 }
 
+
+function getPinyin(chinese) {
+  return pinyin(chinese, { toneType: "none", type: "array" });
+}
 function GetUrlPath() {
     // 在本地网页的情况下获取路径
     if (window.location.protocol === 'file:') {
@@ -29,5 +35,6 @@ function GetUrlPath() {
 export default{
     WPS_Enum,
     GetUrlPath,
-    GetRouterHash
+    GetRouterHash,
+    getPinyin,
 }
